@@ -2,8 +2,6 @@ import os
 from os import *
 from pystyle import *
 
-System.Size(150, 40)
-
 def alinea():
     print()
     print()
@@ -11,9 +9,9 @@ def alinea():
 
 def exit_mode():
     alinea()
-    input(Colorate.Horizontal(Colors.blue_to_red, '                                       [+] appuyer 3 fois sur entrer pour fermer >>> ', 1))
-    input(Colorate.Horizontal(Colors.blue_to_red, '                                       [+] appuyer 2 fois sur entrer pour fermer >>> ', 1))
-    input(Colorate.Horizontal(Colors.blue_to_red, '                                       [+] appuyer 1 fois sur entrer pour fermer >>> ', 1))
+    input('                                       [+] appuyer 3 fois sur entrer pour fermer >>> ')
+    input('                                       [+] appuyer 2 fois sur entrer pour fermer >>> ')
+    input('                                       [+] appuyer 1 fois sur entrer pour fermer >>> ')
     exit()
 
 
@@ -26,19 +24,19 @@ banner = '''
                                         \__,_|_| |_|___/_| |_|_| |_|\__,_| 
 '''
 
-print(Colorate.Horizontal(Colors.blue_to_red, banner, 1))
+print(banner)
 
 alinea()
 
-word = input(Colorate.Horizontal(Colors.blue_to_red, '                                       [?] Entrer le mot a retrouver >>> ', 1))
+word = input('                                       [?] Entrer le mot a retrouver >>> ')
 alinea()
 result = os.system('ipconfig /displaydns | findstr ' + word)
 
 if (result == 1):
-    print(Colorate.Horizontal(Colors.blue_to_red, "                                       [!] Aucune recherche associé", 1))
+    print("                                       [!] Aucune recherche associé")
     exit_mode()
 
 else:
     alinea()
-    print(Colorate.Horizontal(Colors.green_to_red, f"                                       [!] Le mot {word} a bien été recherché", 1))
+    print(f"                                       [!] Le mot {word} a bien été recherché")
     exit_mode()
