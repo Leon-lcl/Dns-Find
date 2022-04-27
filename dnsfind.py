@@ -1,6 +1,5 @@
 import os
 from os import *
-from pystyle import *
 
 def alinea():
     print()
